@@ -3,9 +3,9 @@ title: "내일배움캠프 AI 6기 스타터 노트"
 excerpt: "내가 AI 트랙에 참여한 계기는 무엇인가요?"
 
 categories:
-  - blog
+  - Blog
 tags:
-  - blog
+  - Blog
 last_modified_at: 2024-01-16T15:45
 ---
 
