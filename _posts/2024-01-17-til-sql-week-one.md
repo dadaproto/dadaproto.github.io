@@ -1,5 +1,5 @@
 ---
-title: "TIL 엑셀보다 쉽고 빠른 SQL 1주차"
+title: "[TIL] 엑셀보다 쉽고 빠른 SQL 1주차"
 excerpt: "SQL이란? 데이터베이스와 대화를 하기 위한 언어이다."
 toc: true
 categories:
