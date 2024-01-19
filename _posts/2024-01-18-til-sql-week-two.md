@@ -97,7 +97,7 @@ FROM payments
 
 ```sql
 SELECT MIN(price) min_price,
-			 MAX(price) max_price
+	MAX(price) max_price
 FROM food_orders
 ```
 
@@ -111,7 +111,7 @@ FROM food_orders
 -- 각 column의 alias를 min_quantity와 max_quantity로 설정하기
 
 SELECT MIN(quantity) as min_quantity,
-			 MAX(quantity) as max_quantity
+	MAX(quantity) as max_quantity
 from food_orders
 ```
 
@@ -185,7 +185,7 @@ group by cuisine_type
 
 > ### 실습해보자! 👩🏻‍💻
 
-#### 음식점별 주문 금액 최댓값 조회하기
+#### 음식점별 주문 금액 최대값 조회하기
 
 ```sql
 select cuisine_type,
@@ -239,7 +239,7 @@ order by sum(price)
 
 > ### 실습해보자! 👩🏻‍💻
 
-#### 1. 음식점별 주문 금액 최댓값 조회하기 - 최댓값 기준으로 내림차순 정렬
+#### 1. 음식점별 주문 금액 최대값 조회하기 - 최대값 기준으로 내림차순 정렬
 
 ```sql
 select restaurant_name,
