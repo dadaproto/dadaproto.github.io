@@ -81,7 +81,7 @@ Category: `SQL`
 
 ```sql
 select restaurant_name "원래 상점명",
-		replace(restaurant_name, 'Blue', 'Pink') "바뀐 상점명"
+	replace(restaurant_name, 'Blue', 'Pink') "바뀐 상점명"
 from food_orders
 where restaurant_name like '%Blue Ribbon%'
 ```
@@ -97,7 +97,7 @@ where restaurant_name like '%Blue Ribbon%'
 
 ```sql
 select addr,
-		replace(addr, '문곡리', '문가리') "바뀐 주소"
+	replace(addr, '문곡리', '문가리') "바뀐 주소"
 from food_orders
 where addr like '%문곡리%'
 ```
@@ -115,7 +115,7 @@ where addr like '%문곡리%'
 
 ```sql
 select addr "원래 주소",
-		substr(addr, 1, 2) "시도"
+	substr(addr, 1, 2) "시도"
 from food_orders
 where addr like '%서울특별시%'
 ```
@@ -129,8 +129,8 @@ where addr like '%서울특별시%'
 
 ```sql
 select restaurant_name "원래 이름"
-		addr "원래 주소"
-		concat('[', substr(addr, 1, 2), ']', restaurant_name) "바뀐 이름"
+	addr "원래 주소"
+	concat('[', substr(addr, 1, 2), ']', restaurant_name) "바뀐 이름"
 from food_orders
 where addr like '%서울%'
 ```
@@ -179,8 +179,8 @@ Category: `SQL`
 
 ```sql
 select substr(addr, 1, 2) "지역",
-		cuisine_type "타입",
-		avg(price) "평균 금액"
+	cuisine_type "타입",
+	avg(price) "평균 금액"
 from food_orders
 where addr like '%서울%'
 group by cuisine_type
@@ -216,8 +216,8 @@ order by avg(price)
 
 ```sql
 select substr(email, 10) "도메인",
-		count(*) "고객 수",
-		avg(age) "평균 나이"
+	count(*) "고객 수",
+	avg(age) "평균 나이"
 from customers
 group by 1
 ```
@@ -242,7 +242,7 @@ group by 1
 
 ```sql
 select concat('[', substr(addr, 1, 2), '] ', restaurant_name, ' (', cuisine_type, ')') "[지역] 음식점 (음식종류)",
-		count(*) "주문 건수"
+	count(*) "주문 건수"
 from food_orders
 group by 1
 order by 2 desc
