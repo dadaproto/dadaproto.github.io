@@ -44,7 +44,7 @@ ORDER BY NAME
 - [Difference Between SQL COUNT(\*), COUNT(1), COUNT(column_name) In SQL Server](<https://www.dbblogger.com/post/difference-between-sql-count-count-1-count-column_name-in-sql-server#:~:text=The%20COUNT(*)returns%20the,total%20records%20in%20that%20table.&text=The%20COUNT(1)%20function%20replaces,is%20also%20replaced%20by%201>)
 - ChatGPT의 답변
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/31878edc-82e4-4e36-9b84-b78d5b5292cf/e7071baf-927a-4884-a45f-5b3b2e74c7dd/Untitled.png)
+![Asked SQL COUNT to ChatGPT](/docs/assets/images/chatgpt_count.png){: .align-center width="70%"}
 
 ## 3-1 오늘 배울 것
 
@@ -87,10 +87,10 @@ where restaurant_name like '%Blue Ribbon%'
 ```
 
 - `REPLACE`(column_name, old_string, new_string): 특정 컬럼의 특정 문자열을 다른 문자열로 바꾸는 함수
-  | Results | 원래 상점명               | 바뀐 상점명               |
+  | Results | 원래 상점명 | 바뀐 상점명 |
   | ------- | ------------------------- | ------------------------- |
-  | 1       | Blue Ribbon Sushi Izakaya | Pink Ribbon Sushi Izakaya |
-  | 2       | Blue Ribbon Fried Chicken | Pink Ribbon Fried Chicken |
+  | 1 | Blue Ribbon Sushi Izakaya | Pink Ribbon Sushi Izakaya |
+  | 2 | Blue Ribbon Fried Chicken | Pink Ribbon Fried Chicken |
 
 > 실습: ‘문곡리’가 들어간 주소를 ‘문가리’로 바꿔보자.
 
@@ -102,10 +102,10 @@ where addr like '%문곡리%'
 ```
 
 - 해석: `REPLACE` 함수를 이용해 addr 컬럼에서 ‘문곡리’ 문자열을 ‘문가리’ 문자열로 변경하고 해당 컬럼의 별명을 “바뀐 주소”로 설정. 바뀐 주소만 파악할 수 있게 addr 컬럼에서 ‘문곡리’를 포함하는 데이터만 가져와라.
-  | Results | addr                         | 바뀐 주소                    |
+  | Results | addr | 바뀐 주소 |
   | ------- | ---------------------------- | ---------------------------- |
-  | 1       | 경기도 평택군 고덕면 문곡리  | 경기도 평택군 고덕면 문가리  |
-  | 2       | 세종특별자치시 부강면 문곡리 | 세종특별자치시 부강면 문가리 |
+  | 1 | 경기도 평택군 고덕면 문곡리 | 경기도 평택군 고덕면 문가리 |
+  | 2 | 세종특별자치시 부강면 문곡리 | 세종특별자치시 부강면 문가리 |
 
 ### SUBSTRING, SUBSTR
 
@@ -186,24 +186,28 @@ order by avg(price)
 ```
 
 - 풀이
+
   - `SELECT` addr 컬럼 데이터의 첫번째 글자부터 두글자 추출, cuisine_type, price 평균
   - `FROM` food_orders 테이블
   - `WHERE` addr 컬럼에서 ‘서울’을 포함하는 데이터만
   - `GROUP BY` cuisine_type 카테고리로 분류
+
     ```sql
     -- select 컬럼 순 숫자로 표기할 수 있다
     -- group by substr(addr, 1, 2), cuisine_type와 동일
 
     group by 1, 2
     ```
+
   - `ORDER BY` 평균 금액 오름차순 정렬
+
 - Results
-  | 지역 | 타입          | 평균 금액 |
+  | 지역 | 타입 | 평균 금액 |
   | ---- | ------------- | --------- |
-  | 서울 | Vietnamese    | 12,130    |
-  | 서울 | Spanish       | 12,565    |
-  | 서울 | Mediterranean | 14,678    |
-  | …    | …             | …         |
+  | 서울 | Vietnamese | 12,130 |
+  | 서울 | Spanish | 12,565 |
+  | 서울 | Mediterranean | 14,678 |
+  | … | … | … |
 
 > 이메일 도메인 별 고객 수와 평균 연령 구하기
 
@@ -223,12 +227,12 @@ group by 1
   - `FROM` customers 테이블에서 데이터를 가져온다.
   - `GROUP BY` 1 즉 도메인으로 카테고리를 나눈다.
 - Results
-  | 도메인      | 고객 수 | 평균 나이 |
+  | 도메인 | 고객 수 | 평균 나이 |
   | ----------- | ------- | --------- |
-  | hanmail.com | 310     | 49.5323   |
-  | daum.net    | 266     | 48.6015   |
-  | mail.com    | 296     | 50.5473   |
-  | naver.com   | 305     | 50.2525   |
+  | hanmail.com | 310 | 49.5323 |
+  | daum.net | 266 | 48.6015 |
+  | mail.com | 296 | 50.5473 |
+  | naver.com | 305 | 50.2525 |
 
 > ‘[지역(시도)] 음식점 이름 (음식 종류)’ 컬럼을 만들고, 총 주문 건수 구하기
 
@@ -241,13 +245,13 @@ order by 2 desc
 ```
 
 - Results
-  | [지역] 음식점 (음식종류)                    | 주문 건수 |
+  | [지역] 음식점 (음식종류) | 주문 건수 |
   | ------------------------------------------- | --------- |
-  | [경기] Shake Shack (American)               | 131       |
-  | [경기] Blue Ribbon Sushi (Japanese)         | 69        |
-  | [경기] Blue Ribbon Fried Chicken (American) | 64        |
-  | [경기] The Meatball Shop (Italian)          | 55        |
-  | …                                           | …         |
+  | [경기] Shake Shack (American) | 131 |
+  | [경기] Blue Ribbon Sushi (Japanese) | 69 |
+  | [경기] Blue Ribbon Fried Chicken (American) | 64 |
+  | [경기] The Meatball Shop (Italian) | 55 |
+  | … | … |
 
 ## 코드카타에서 배운 것 (LIMIT)
 
