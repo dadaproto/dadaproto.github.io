@@ -135,7 +135,7 @@ where addr like '%서울%'
 
 - `CONCAT`(string1, string2, …): 여러 문자열을 결합하는 함수이다.
   - 특수문자는 작은 따옴표 씌워 표기
-  - `SUBSTRING` 등 [문자열 함수](https://dev.mysql.com/doc/refman/8.0/en/string-functions.html)를 포함할 수 있다. (ex. `CHAR_LENGTH`,
+  - `SUBSTRING` 등 [문자열 함수](https://dev.mysql.com/doc/refman/8.0/en/string-functions.html)를 포함할 수 있다. (ex. `CHAR_LENGTH`,`LENGTH`, `UPPER`,...)
   - column_name으로 column 데이터를 포함할 수 있다.
 
 ### 더 알아보기
