@@ -1,5 +1,5 @@
 ---
-title: "[TIL] SQL 3주차!"
+title: "[TIL] SQL 3주차! 그리고 SQL 문제 복습"
 excerpt: "CASE, IF 조건문을 활용해 여러 조건에 따라 다른 수식 적용해보기 / IN 비교 연산자"
 toc: true
 categories:
@@ -27,11 +27,11 @@ where age between 10 and 29
 ```
 
 - Results
-  | 고객 분류 | name   | age | gender |
+  | 고객 분류 | name | age | gender |
   | --------- | ------ | --- | ------ |
-  | 10대 남성 | 김도진 | 15  | male   |
-  | 10대 여성 | 정지은 | 15  | female |
-  | 20대 남성 | 김하호 | 21  | male   |
+  | 10대 남성 | 김도진 | 15 | male |
+  | 10대 여성 | 정지은 | 15 | female |
+  | 20대 남성 | 김하호 | 21 | male |
 - CASE, WHEN, THEN, END 문법을 활용해 해당 조건에 해당하는 그룹을 나눠줄 수 있다.
 
 > 음식 단가, 음식 종류 별로 음식점 그룹 나누기
@@ -52,11 +52,11 @@ FROM food_orders
 - CASE 조건문을 사용해 음식 종류를 분류
 - 기존의 price는 주문량인 quantity를 포함한 금액이므로, IF 조건문을 활용해 price를 quantity로 나누고 alias를 평균 금액으로 정의
 - Results
-  | 음식 종류 | cuisine_type | restaurant_name           | 평균 금액 |
+  | 음식 종류 | cuisine_type | restaurant_name | 평균 금액 |
   | --------- | ------------ | ------------------------- | --------- |
-  | 한식      | Korean       | Hangawi                   | 30,750    |
-  | 아시아식  | Japanese     | Blue Ribbon Sushi Izakaya | 12,080    |
-  | 기타      | Mexican      | Cafe Habana               | 12,230    |
+  | 한식 | Korean | Hangawi | 30,750 |
+  | 아시아식 | Japanese | Blue Ribbon Sushi Izakaya | 12,080 |
+  | 기타 | Mexican | Cafe Habana | 12,230 |
 
 ```sql
 -- 가상의 배달 음식 플랫폼의 메뉴 추천 페이지를 상상하면서 적어본 쿼리
