@@ -3,9 +3,9 @@ title: "[TIL] SQL 3주차! 그리고 SQL 문제 복습"
 excerpt: "CASE, IF 조건문을 활용해 여러 조건에 따라 다른 수식 적용해보기 / IN 비교 연산자"
 toc: true
 categories:
-  - WIL
+  - TIL
 tags:
-  - WIL
+  - TIL
 last_modified_at: 2024-01-22T22:47
 ---
 
