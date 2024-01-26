@@ -88,16 +88,16 @@ order by 7 desc
 - INNER JOIN을 사용하지 않으면, 두 테이블 간에 **`order_id`**가 일치하는 행만 선택되기 때문에 각 주문에 대한 시간 정보를 함께 사용할 수 없게 되어 원하는 결과를 얻을 수 없게 된다.
 - Results
 
-| restaurant_name           | 15  | 16  | 17  | 18  | 19  | 20  |
-| :------------------------ | :-- | :-- | :-- | :-- | :-- | :-- |
-| Shake Shack               | 13  | 7   | 6   | 9   | 3   | 9   |
-| The Meatball Shop         | 4   | 2   | 7   | 3   | 4   | 9   |
-| Blue Ribbon Fried Chicken | 5   | 4   | 2   | 4   | 4   | 5   |
-| Han Dynasty               | 1   | 0   | 3   | 0   | 3   | 5   |
-| Parm                      | 2   | 2   | 3   | 4   | 2   | 4   |
-| TAO                       | 6   | 3   | 0   | 3   | 0   | 4   |
-| Blue Ribbon Sushi         | 4   | 7   | 4   | 1   | 4   | 4   |
-| Osteria Morini            | 0   | 1   | 1   | 0   | 1   | 3   |
+  | restaurant_name           | 15  | 16  | 17  | 18  | 19  | 20  |
+  | :------------------------ | :-- | :-- | :-- | :-- | :-- | :-- |
+  | Shake Shack               | 13  | 7   | 6   | 9   | 3   | 9   |
+  | The Meatball Shop         | 4   | 2   | 7   | 3   | 4   | 9   |
+  | Blue Ribbon Fried Chicken | 5   | 4   | 2   | 4   | 4   | 5   |
+  | Han Dynasty               | 1   | 0   | 3   | 0   | 3   | 5   |
+  | Parm                      | 2   | 2   | 3   | 4   | 2   | 4   |
+  | TAO                       | 6   | 3   | 0   | 3   | 0   | 4   |
+  | Blue Ribbon Sushi         | 4   | 7   | 4   | 1   | 4   | 4   |
+  | Osteria Morini            | 0   | 1   | 1   | 0   | 1   | 3   |
 
 > 성별, 연령별 주문 건수 Pivot Table 뷰 만들기 (나이는 10~59세 사이, 연령 순으로 내림차순)
 
