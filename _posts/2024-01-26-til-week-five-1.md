@@ -1,6 +1,6 @@
 ---
 title: "[TIL] SQL 5주차 (1)"
-excerpt: "L유효하지 않은 데이터 처리 방법, Pivot Table"
+excerpt: "유효하지 않은 데이터 처리 방법, Pivot Table"
 toc: true
 categories:
   - TIL
