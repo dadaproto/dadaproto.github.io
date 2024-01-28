@@ -157,7 +157,6 @@ group by 1
 
 ```sql
 -- 정답 쿼리
--- 내가 작성한 쿼리
 select cuisine_type,
 	max(if(age=10, cnt, 0)) '10대',
 	max(if(age=20, cnt, 0)) '20대',
