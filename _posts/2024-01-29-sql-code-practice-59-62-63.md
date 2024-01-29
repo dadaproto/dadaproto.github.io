@@ -1,5 +1,5 @@
 ---
-title: "[TIL] SQL Code Test Practice - 어쩌다 보니 자동차 문제 모음!"
+title: "[TIL] SQL - 어쩌다 보니 자동차 문제 모음!"
 excerpt: "MAX() in SELECT, DATEDIFF + 1, Order of execution of a Query"
 toc: true
 categories:
