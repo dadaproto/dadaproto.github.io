@@ -1,5 +1,5 @@
 ---
-title: "[TIL] SQL 코테 연습 - 주로 JOIN과 필터링 문제"
+title: "[TIL] SQL 코테 연습 - 주로 JOIN과 필터링"
 excerpt: "WHERE IN, INNER JOIN, GROUP_CONCAT, WHERE 절에서 집계 함수, JOIN VS UNION"
 toc: true
 categories:
