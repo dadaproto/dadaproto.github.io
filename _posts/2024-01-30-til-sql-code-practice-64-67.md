@@ -80,18 +80,34 @@ WHERE A.NAME LIKE '%MILK%' AND NAME LIKE '%YOGURT%'
   ```
 
 - CART_PRODUCTS
-  | ID | CART_ID | NAME |
-  | ---- | ------- | ------------ |
-  | 3727 | 195 | Coffee |
-  | 3728 | 195 | Ketchup |
-  | 3729 | 195 | Pasta |
-  | 3730 | 195 | Snack |
-  | 3731 | 195 | Trash Bag |
-  | 3732 | 195 | Laundry Care |
+
+  | ID   | CART_ID | NAME         |
+  | :--- | :------ | :----------- |
+  | 3727 | 195     | Coffee       |
+  | 3728 | 195     | Ketchup      |
+  | 3729 | 195     | Pasta        |
+  | 3730 | 195     | Snack        |
+  | 3731 | 195     | Trash Bag    |
+  | 3732 | 195     | Laundry Care |
+
 - Results
-  | CART_ID | NAME |
-  | ------- | ------------------------------------------------------ |
-  | 195 | Coffee,Ketchup,Pasta,Snack,Trash Bag,Laundry Care,Soap |
+
+  | CART_ID | NAME                                                   |
+  | :------ | :----------------------------------------------------- |
+  | 195     | Coffee,Ketchup,Pasta,Snack,Trash Bag,Laundry Care,Soap |
+
+### 다른 사람들의 쿼리 줍줍
+
+```sql
+SELECT CART_ID
+FROM CART_PRODUCTS
+WHERE NAME = 'Milk' OR NAME = 'Yogurt'
+GROUP BY CART_ID
+HAVING COUNT(DISTINCT NAME) = 2
+ORDER BY 1
+```
+
+- WHERE 절에서 문자열을 비교하고, CART_ID로 그룹 후 COUNT를 사용해 조회
 
 ## 조회수가 가장 많은 중고거래 게시판의 첨부파일 조회하기 (WHERE 절에서 집계 함수를 사용할 때)
 
