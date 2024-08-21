@@ -16,11 +16,11 @@ minimal_mistakes_skin: "dark" # "default", "air", "aqua", "contrast", "dark", "d
 
 # Site Settings
 locale: "en-US"
-title: "Swift Crisp"
+title: "LoggingLogin 로깅로깅"
 title_separator: "-"
 subtitle: # site tagline that appears below site title in masthead
 name: "Mimmo"
-description: "Mimmo's Coding Journal"
+description: "Trying to log at least 1 post a week. Since August 2024. "
 url: # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl: # the subpath of your site, e.g. "/blog"
 repository: # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
